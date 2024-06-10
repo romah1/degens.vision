@@ -1,0 +1,13 @@
+.Container {
+    display: flex;
+    width: 25%;
+    float: left;
+    position: relative;
+    height: calc(100vh - 121px);
+    background-color: var(--delimiter-color);
+    border-radius: 10px;
+    font-family: var(--font-family) !important;
+    font-weight: var(--font-weight-normal) !important;
+
+    flex-direction: column;
+}

@@ -1,0 +1,32 @@
+.Copy {
+    display: flex;
+    position: relative;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &__value {
+        text-decoration: none;
+        color: #FFF;
+        display: flex;
+        margin-right: 5px;
+        font-weight: 400;
+        font-size: 12px;
+        font-family: var(--font-family);
+        transition: opacity 0.3s;
+    }
+
+    &__copy {
+        width: 20px;
+        height: 20px;
+        transition: opacity 0.3s;
+    }
+
+    &__copy:hover,
+    &__value:hover {
+        opacity: 0.7;
+    }
+}
+
+

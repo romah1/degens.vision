@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --color-footer-border: #dedddb;
+    --color-footer-link: #8792a8;
+    --color-row-hint: #999;
+    --color-restore-border: rgba(0, 0, 0, .1);
+
+    --color-macros-border: rgba(0, 0, 0, .1);
+    --color-marcos: #eee;
+    --color-macros-input-border: rgba(0, 0, 0, .2);
+    --color-tools-form-divider: #e5e5e5;
+
+    --text-small: 12px;
+    --text-smaller: 13px;
+    --text-normal: 15px;
+    --text-medium: 18px;
+    --text-big: 24px;
+
+    --text-heading-xxl: 32px;
+    --text-line-height-xxl: 44px;
+    --text-heading-xl: 24px;
+    --text-line-height-xl: 32px;
+    --text-heading-l: 20px;
+    --text-line-height-l: 28px;
+    --text-heading-m: 18px;
+    --text-line-height-m: 24px;
+    --text-heading-s: 15px;
+    --text-line-height-s: 20px;
+    --text-heading-xs: 13px;
+    --text-line-height-xs: 16px;
+
+    --text-xl-rem: 1.45rem;
+    --text-xs-rem: 0.7rem;
+    --text-s-rem: 0.9rem;
+
+    --tools-form-border-radius: 6px;
+
+    --gap-xxs: 4px;
+    --gap-xs: 8px;
+    --gap-m: 16px;
+    --gap-xl: 24px;
+    --gap-xxl: 28px;
+
+    --screen-mobile: 320px;
+    --screen-tablet: 768px;
+    --screen-desktop: 1024px;
+    --screen-wide: 1920px;
+
+    --background-color: #131018;
+    --delimiter-color: #1C1822;
+    --delimiter-color-light: #3F3A47;
+
+    --main-text-color: #fff;
+    --main-text-size: 20px;
+
+    --hover-nft-color: #231E2D;
+
+    --disabled-button-color: #3F3A47;
+    --checked-button-color: #0ABAB5;
+    --active-button-color: #fff;
+
+    --secondary-text-color: #615B6B;
+
+    --font-family: "Unbounded";
+    --font-family-secondary: "Mulish";
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+
+    font-family: var(--font-family) !important;
+    font-weight: var(--font-weight-normal) !important;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    color: var(--main-text-color);
+    font-size: var(--main-text-size);
+
+}
+
+.Root {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    --Sidebar-width: 60px;
+
+    &__MainInfo {
+        --Sidebar-width: 170px;
+        min-height: 100vh;
+        position: absolute;
+        display: block;
+        margin-left: var(--Sidebar-width);
+        --main-info-width: calc(100vw - var(--Sidebar-width));
+        width: calc(100vw - var(--Sidebar-width));
+    }
+}
+
+.Root-Container {
+    position: relative;
+    z-index: 0;
+    flex-grow: 1;
+    padding-bottom: 32px;
+}
+
+.no-show {
+    display: none;
+}
+
+.Error-Container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+}
+
+/* .wallet-adapter-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000000;
+
+} */

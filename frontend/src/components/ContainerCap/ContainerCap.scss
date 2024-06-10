@@ -1,0 +1,35 @@
+.ContainerCap {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+
+    // border-bottom: 1px solid var(--delimiter-color-light);
+    padding: 15px 15px 0;
+
+    &__Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__HeaderText {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        font-weight: var(--font-weight-bold);
+        font-size: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        svg {
+            margin-left: 10px;
+            overflow: visible;
+        }
+    }
+}

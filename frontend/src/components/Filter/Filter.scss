@@ -1,0 +1,228 @@
+
+.Filter {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    transition: height 0.3s !important;
+    height: 0;
+    overflow: hidden;
+
+    background-color: var(--delimiter-color);
+    z-index: 3;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &__Block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    &__Title {
+        font-family: var(--font-family) !important;
+        font-weight: 600 !important;
+        font-size: 16px;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    &__Columns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 100%;
+
+        .MuiInput-variantOutlined {
+            width: 45% !important;
+            padding-inline: 30px !important;
+            background-color: transparent !important;
+            border: 1px solid var(--delimiter-color-light) !important;
+            border-radius: 10px !important;
+            input {
+                background-color: transparent !important;
+                font-family: var(--font-family) !important;
+                font-weight: 400 !important;
+                font-size: 12px !important;
+                color: #FFF !important;
+
+            }
+        }
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    &__ButtonGroup {
+        display: flex;
+        position: relative;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__ButtonApply,
+    &__Button {
+        width: 47%;
+        font-family: var(--font-family) !important;
+        font-weight: 400 !important;
+        font-size: 12px !important;
+        border-radius: 10px !important;
+        border-color: var(--delimiter-color-light) !important;
+        color: #fff !important;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s !important;
+    }
+
+    &__ButtonApply {
+        background-color: var(--checked-button-color) !important;
+    }
+
+    &__ButtonApply:hover,
+    &__Button:hover {
+        background-color: transparent !important;
+        border-color: var(--checked-button-color) !important;
+        color: var(--checked-button-color) !important;
+    }
+
+    &__RadioButton {
+        .MuiRadio-radio {
+            transition: border-color 0.3s !important;
+            background-color: transparent !important;
+            border-color: var(--delimiter-color-light) !important;
+        }
+
+        .MuiRadio-radio.Mui-checked {
+            border-color: var(--checked-button-color) !important;
+        }
+
+        .MuiRadio-icon {
+            background-color: var(--checked-button-color) !important;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s !important;
+        }
+
+        .Mui-checked > .MuiRadio-icon {
+            opacity: 1;
+        }
+    }
+
+    .MuiCheckbox-label,
+    .MuiRadio-label {
+        font-family: var(--font-family) !important;
+        font-weight: 400 !important;
+        font-size: 12px !important;
+        transition: color 0.3s !important;
+        color: var(--delimiter-color-light) !important;
+    }
+
+    .Mui-checked > .MuiCheckbox-label,
+    .Mui-checked > .MuiRadio-label {
+        color: #FFF !important;
+    }
+
+    .MuiList-root {
+        margin-top: -10px;
+    }
+
+    &__LaunchpadItem {
+        border: none !important;
+        background-color: transparent !important;
+        --svg-color: var(--delimiter-color-light);
+        padding-inline-start: 0 !important;
+
+        span {
+            border: none !important;
+        }
+
+        .MuiCheckbox-action {
+            background-color: transparent !important;
+        }
+
+        .MuiListItemDecorator-root {
+            svg {
+                width: 30px !important;
+                height: 30px !important;
+                overflow: visible;
+            }
+
+            svg > circle {
+                transition: stroke 0.3s !important;
+                opacity: 1 !important;
+                stroke: var(--svg-color) !important;
+            }
+
+            svg > g,
+            svg > g > * {
+                transition: opacity 0.3s, stroke 0.3s !important;
+                opacity: 0.7 !important;
+            }
+        }
+        padding: 10px 0 !important;
+    }
+
+    &__LaunchpadItem:has(> .Mui-checked) {
+        --svg-color: var(--checked-button-color);
+        .MuiListItemDecorator-root {
+            svg > circle {
+                opacity: 1 !important;
+                stroke: var(--checked-button-color) !important;
+            }
+
+            svg > g,
+            svg > g > * {
+                opacity: 1 !important;
+                stroke: var(--checked-button-color) !important;
+            }
+        }
+    }
+
+    &__Slider {
+        align-self: center;
+        width: calc(100% - 10px) !important;
+        margin-bottom: 30px !important;
+        .MuiSlider-rail {
+            height: 1px !important;
+            background-color: var(--delimiter-color-light) !important;
+        }
+        .MuiSlider-mark {
+            display: none;
+        }
+
+        .MuiSlider-thumb {
+            background-color: var(--checked-button-color) !important;
+            width: 10px !important;
+            height: 10px !important;
+        }
+
+        .MuiSlider-thumb::before {
+            border-color: var(--checked-button-color) !important;
+        }
+
+        .MuiSlider-track {
+            background-color: var(--checked-button-color) !important;
+            height: 1px !important;
+        }
+
+        .MuiSlider-markLabel {
+            transform: translateX(calc(-100% + 5px));
+        }
+        .MuiSlider-markLabel:first-child {
+            transform: translateX(0);
+        }
+    }
+}
+
+.Filter.Active {
+    height: calc(100vh - 212px);
+    padding-bottom: 15px;
+}

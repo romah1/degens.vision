@@ -1,0 +1,25 @@
+.PlayPauseIcon {
+    cursor: pointer;
+}
+
+.PlayPauseIcon:hover {
+    opacity: 0.7;
+}
+
+
+.FilterIcon {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.FilterIcon.Active,
+.FilterIcon:hover {
+    background: var(--delimiter-color) !important;
+    color: var(--checked-button-color) !important;
+
+    *,
+    * > * {
+        opacity: 1 !important;
+        stroke: var(--checked-button-color) !important;
+    }
+}

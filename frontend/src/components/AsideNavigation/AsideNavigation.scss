@@ -1,0 +1,127 @@
+.AsideNavigation {
+
+    &__Sidebar {
+        --Sidebar-width: 60px;
+    }
+
+    &__Sidebar:focus,
+    &__Sidebar:hover {
+        --Sidebar-width: 160px;
+    }
+
+    &__Sidebar {
+        transition: all 0.2s;
+        position: relative;
+        z-index: 1;
+        height: 100vh;
+        overflow: hidden;
+        width: var(--Sidebar-width);
+        top: 0;
+        padding: 5px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 2;
+        // border-right: 1px solid;
+        // border-color: var(--delimiter-color);
+        background-color: var(--background-color);
+        // border-right: 1px solid var(--delimiter-color-light) !important;
+    }
+
+    &__OtherButtons {
+        transition: all 0.2s;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        padding: 34px 0 15px;
+    }
+
+    &__Logo::after {
+        content: "";
+        position: absolute;
+        // border-bottom: 1px solid var(--delimiter-color-light) !important;
+        left: -10px;
+        bottom: 0;
+
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__Logo {
+        display: flex;
+        position: relative;
+        align-content: center;
+        align-items: center;
+        width: 160px;
+        cursor: pointer;
+
+        padding: 18px 10px !important;
+
+        svg:nth-child(2n) {
+            margin-left: 20px;
+        }
+    }
+
+    &__ActionButton {
+        font-family: var(--font-family) !important;
+        font-weight: var(--font-weight-normal) !important;
+        font-size: 12px !important;
+
+        position: relative !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        margin: 5px !important;
+        border-radius: 10px !important;
+        width: 100%;
+        padding: 0 !important;
+        color: var(--main-text-color) !important;
+
+        span {
+            position: relative !important;
+            padding: 12px 15px !important;
+            margin-right: 5px !important;
+        }
+
+        svg > *,
+        svg > * > * {
+            opacity: 1 !important;
+            stroke: var(--main-text-color) !important;
+        }
+    }
+
+    &__ActionButton.Mui-disabled {
+        opacity: 0.3 !important;
+        color: var(--disabled-button-color) !important;
+        svg > *,
+        svg > * > * {
+            opacity: 1 !important;
+            stroke: var(--disabled-button-color) !important;
+        }
+    }
+
+    &__ActionButton:hover {
+        background: var(--delimiter-color) !important;
+        color: var(--checked-button-color) !important;
+
+        svg > *,
+        svg > * > * {
+            opacity: 1 !important;
+            stroke: var(--checked-button-color) !important;
+        }
+    }
+
+    &__Socials,
+    &__Actions {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+}

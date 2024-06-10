@@ -1,0 +1,129 @@
+
+.TopBar {
+    position: relative;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    transition: all 0.3s;
+    width: calc(100% - 24px);
+    height: 45px !important;
+    z-index: 20;
+    // border-bottom: 1px solid var(--delimiter-color-light);
+
+    .wallet-adapter-dropdown-list {
+        width: 150px;
+    }
+
+    &__search {
+        display: flex;
+        flex-direction: row;
+        min-width: 450px;
+        height: 45px;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    &__currency {
+        display: flex;
+        padding: 15px 30px;
+
+        svg {
+            width: 15px !important;
+            height: 15px !important;
+            overflow: visible;
+        }
+
+        border: 1px solid var(--delimiter-color-light);
+        border-radius: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &__search-bar {
+        width: 350px;
+        background-color: transparent !important;
+        border-color: var(--delimiter-color-light) !important;
+        color: var(--delimiter-color-light) !important;
+        border-radius: 10px !important;
+        font-family: var(--font-family) !important;
+        font-weight: var(--font-weight-normal) !important;
+        font-size: 12px !important;
+        padding: 0 30px !important;
+
+        div {
+            margin-right: 20px !important;
+        }
+
+        input::-webkit-input-placeholder {
+            opacity: 1 !important;
+        }
+    }
+
+    &__search-bar::before {
+        box-shadow: none !important;
+    }
+
+    &__ConnectButton {
+        width: 150px;
+        height: 45px !important;
+        background: var(--delimiter-color) !important;
+        color: var(--active-button-color) !important;
+        font-family: var(--font-family) !important;
+        font-weight: var(--font-weight-normal) !important;
+        font-size: 12px !important;
+        border-radius: 10px;
+        transition: all 0.1s;
+        align-items: center !important;
+        justify-content: space-evenly !important;
+
+        img {
+            width: 30px;
+        }
+        span {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-top: 1px;
+            min-width: 50px;
+            height: 20px;
+            background: none;
+            font-size: 12px !important;
+        }
+
+        span::before {
+            background-color: var(--delimiter-color-light);
+        }
+
+        span::after {
+            background: linear-gradient( 90deg, transparent, var(--delimiter-color, rgba(0 0 0 / 0.08)), transparent );
+        }
+
+        svg > *,
+        svg > * > * {
+            transition: all 0.1s;
+            opacity: 1 !important;
+            stroke: var(--checked-button-color) !important;
+            fill: none !important;
+        }
+    }
+
+    &__ConnectButton:hover {
+        transition: all 0.1s;
+        opacity: 0.6;
+
+        cursor: pointer;
+
+        span {
+            cursor: pointer;
+        }
+        svg > *,
+        svg > * > * {
+            fill: none !important;
+            transition: all 0.1s;
+            opacity: 0.6;
+        }
+    }
+}

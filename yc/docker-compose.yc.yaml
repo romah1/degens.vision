@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  nginx:
+    container_name: nginx_service
+    image: {{ env.NGINX_IMAGE }}
+    ports:
+      - '80:80'
+    restart: always
+    depends_on:
+      - frontend
+
+  frontend:
+    container_name: frontend_service
+    image: {{ env.FRONTEND_IMAGE }}
+    restart: always
